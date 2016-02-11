@@ -212,6 +212,9 @@ function create_config( )
     "inrealm",
     "ingroup",
     "inpm",
+    "info",
+    "antilink",
+    "auto_leave",
     "banhammer",
     "stats",
     "anti_spam",
@@ -226,7 +229,7 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {120816252,0,(our_id)},--Sudo users
+    sudo_users = {120816252,147191022,(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
