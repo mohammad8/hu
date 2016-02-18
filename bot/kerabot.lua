@@ -241,10 +241,10 @@ function create_config( )
 @keraboy
 @mohammadslayer 
 
-کاناب تیم ما : @Kerach
+کانال تیم ما : @Kerach
 ]],
     help_text_realm = [[
-Realm Commands:
+دستورات گروه تخصصی :
 
 ساخت گروه  [اسم]
 یک گروه میسازد
@@ -291,137 +291,139 @@ Realm Commands:
 لیست گروه ها
 دریافت لیستی از تمام گرو ها
 
-!list realms
-Get a list of all realms
+لیست گروه های تخصصی
+دریافت لیستی از تمام گروه های تخصصی
 
-!log
-Grt a logfile of current group or realm
+لیست
+دریافت فایلی از لیست گروه ها / گروه های تخصصی
 
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-Only sudo users can run this command
+ارسال به همه [متن]
+ارسال به همه سلام (مثال)
+ارسال متن به همه گروه ها
+فقط سودو ها میتوانند این دستور را اجرا کنند
 
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
-
-
-**U can use both "/" and "!" 
+!bc [آیدی گروه] [متن]
+!bc 123456789 سلام (مثال)
+این دستور متن مورد نظر را به گروه مشخص شده ارسال میکند
 
 
-*Only admins and sudo can add bots in group
+*شما میتوانید دستور ها را هم با نقطه و هم بدون نقطه ارسال کنید 
 
 
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
+*فقط ادمین و سودو میتواند ربات را به گروه دعوت کند
 
-*Only admins and sudo can use res, setowner, commands
+
+*فقط ادمین و سودو میتواند این دستور ها را اجرا کند
+اخراج,بن,×بن,لینک جدید,تنظیم عکس,تنظیم نام,قفل,بازکردن,تنظیم قوانین,تنظیم مشخصات و تنظیمات دیگر
+
+*فقط ادمین و سودو میتوانند از دستور های مشخصات (آیدی) و انتخاب مدیر اصلی , استفاده کند
 ]],
     help_text = [[
-Commands list :
+لیست دستورات :
 
-!kick [username|id]
-You can also do it by reply
+اخراج [آیدی یا یوزرنیم]
+شما میتوانید این دستور را با ریپلی نیز استفاده کنید
 
-!ban [ username|id]
-You can also do it by reply
+بن [آیدی یا یوزرنیم]
+شما میتوانید این دستور را با ریپلی نیز استفاده کنید
 
-!unban [id]
-You can also do it by reply
+×بن [آیدی]
+شما میتوانید این دستور را با ریپلی نیز استفاده کنید
 
-!who
-Members list
+افراد گروه
+لیست اعضا
 
-!modlist
-Moderators list
+مدیر ها
+لیست کمک مدیر ها
 
-!promote [username]
-Promote someone
+ترفیع [یوزرنیم]
+ترفیع یک ادمین
 
-!demote [username]
-Demote someone
+تنزیل [یوزرنیم]
+تنزیل یک ادمین
 
-!kickme
-Will kick user
+خروج
+از گروه خارج میشوید
 
-!about
-Group description
+مشخصات
+مشخصات گروه
 
-!setphoto
-Set and locks group photo
+تنظیم عکس
+تنظیم و قفل عکس گروه
 
-!setname [name]
-Set group name
+تنظیم نام [اسم]
+تنظیم اسم گروه
 
-!rules
-Group rules
+قوانین
+قوانین گروه
 
-!id
-return group id or user id
+آیدی
+ارسال آیدی گروع یا شخص مورد نظر
 
-!help
+راهنما
 
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
+قفل [اعضا|اسم|ربات ها|خروج]	
+قفل کردن [اعضا|اسم|ربات ها|خروج] 
 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+بازکردن [اعضا|اسم|ربات ها|خروج]
+بازکردن قفل [اعضا|اسم|ربات ها|خروج]
 
-!set rules <text>
-Set <text> as rules
+تنظیم قوانین <متن>
+تنظیم <متن> به عنوان قوانین
 
-!set about <text>
-Set <text> as about
+تنظیم مشخصات <متن> 
+تنظیم <متن> به عنوان مشخصات
 
-!settings
-Returns group settings
+تنظیمات
+ارسال تنظیمات گروه
 
-!newlink
-create/revoke your group link
+لینک جدید
+ساخت / تغییر لینک گروه
 
-!link
-returns group link
+لینک
+ارسال لینک گروه
 
-!owner
-returns group owner id
+مدیر اصلی
+ارسال آیدی مدیر اصلی گروه
 
-!setowner [id]
-Will set id as owner
+تنظیم مدیر اصلی [آیدی]
+آیدی مورد نظر را مدیر اصلی میکند
 
-!setflood [value]
-Set [value] as flood sensitivity
+حساسیت [مقدار]
+تنظیم مقدار مورد نظز برای حساسیت اخراج
 
-!stats
-Simple message statistics
+آمار
+ارسال آمار ساده
 
-!save [value] <text>
-Save <text> as [value]
+ذخیره [مقدار] <متن>
+ذخیره <متن> به عنوان [مقدار]
 
-!get [value]
-Returns text of [value]
+دریافت [مقدار]
+ارسال پیامی حاوی  [مقدار]
 
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+پاک کردن [مدیران|قوانین|مشخصات]
+[مدیران|قوانین|مشخصات] را پاک میکند و به حال اول برمیگرداند
 
-!res [username]
-returns user id
-"!res @username"
+مشخصات [یوزرنیم]
+ارسال مشخصات یوزرنین مورد نظز
+"مشخصات @username" (مثال)
 
-!log
-will return group logs
+لیست
+ارسال میکند لیست گروه را
 
-!banlist
-will return group ban list
+لیست بن
+ارسال میکند لیست بن ها را
 
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
+*شما میتوانید دستور ها را هم با نقطه و هم بدون نقطه ارسال کنید 
 
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+*فقط ادمین و سودو میتواند ربات را به گروه دعوت کند
 
-*Only owner can use res,setowner,promote,demote and log commands
+
+*فقط ادمین و سودو میتواند این دستور ها را اجرا کند
+اخراج,بن,×بن,لینک جدید,تنظیم عکس,تنظیم نام,قفل,بازکردن,تنظیم قوانین,تنظیم مشخصات و تنظیمات دیگر
+
+*فقط ادمین و سودو میتوانند از دستور های مشخصات (آیدی) و انتخاب مدیر اصلی , استفاده کند
 
 ]]
   }
