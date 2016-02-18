@@ -227,61 +227,69 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-    "admin"
+    "admin",
+    "welcome",
+    "sms",
+    "calc",
+    "spam"
     },
     sudo_users = {120816252,147191022},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-admins : 
+    about_text = [[Kerabot v2.1 - Open Source
+ادمین ها
+@keraboy
+@mohammadslayer 
+
+کاناب تیم ما : @Kerach
 ]],
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [Name]
-Create a group
+ساخت گروه  [اسم]
+یک گروه میسازد
 
-!createrealm [Name]
-Create a realm
+ساخت گروه تخصصی [اسم]
+گروه تخصصی میسازد
 
-!setname [Name]
-Set realm name
+تنظیم نام [اسم]
+تنظیم نام گروه تخصصی
 
-!setabout [GroupID] [Text]
-Set a group's about text
+تنظیم مشخصات [آیدی گروه] [مشخصات]
+تنظیم مشخصات گروه مورد نظر
 
-!setrules [GroupID] [Text]
-Set a group's rules
+تنظیم قوانین [آیدی گروه] [قوانین]
+تنظیم قوانین گروه مورد نظر
 
-!lock [GroupID] [setting]
-Lock a group's setting
+قفل [آیدی گروه] [تنظیمات ]
+قفل تنظیمات گروه مورو نظر
 
-!unlock [GroupID] [setting]
-Unock a group's setting
+بازکردن [آیدی گروه] [تنظیمات]
+بازکردن قفل تنظیمات گروه مورد نظر
 
-!wholist
-Get a list of members in group/realm
+افراد گروه
+دریافت لیستی از افراد گروه / گروه تخصصی
 
-!who
-Get a file of members in group/realm
+افراد گروه.
+دریافت فایلی از افراد گروه / گروه تخصصی
 
-!type
-Get group type
+الگو
+دریافت الگوی گروع
 
-!kill chat [GroupID]
-Kick all memebers and delete group
+از بین ببر [آیدی گروه]
+از بین بردن تمام اعضا و حذف گروه مورد نظر
 
-!kill realm [RealmID]
-Kick all members and delete realm
+از بین ببر [آیدی گروه تخصصی]
+از بین بردن تمام اعضا و حذف گروه تخصصی
 
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
+اضافه کردن مدیر [آیدی یا یوزرنیم]
+ترفیع یک ادمین با آیدی یا یوزرنیم (فقط سودو)
 
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+از بین بردن مدیر [آیدی یا یوزرنیم]
+تنزیل یک مدیر با آیدی یا یوزرنیم (فق‌ سودو) 
 
-!list groups
-Get a list of all groups
+لیست گروه ها
+دریافت لیستی از تمام گرو ها
 
 !list realms
 Get a list of all realms
