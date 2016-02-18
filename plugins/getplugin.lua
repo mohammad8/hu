@@ -12,7 +12,7 @@ end
 
 return {
   patterns = {
-  "^[!/](send) (.*)$"
+  "^ارسال (.*)$"
   },
   run = run
 }
