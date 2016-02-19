@@ -217,7 +217,6 @@ function create_config( )
     "anti_spam",
     "owners",
     "arabic_lock",
-    "lock_en",
     "sms",
     "calc",
     "info",
@@ -233,7 +232,7 @@ function create_config( )
     "foosh",
     "lock_link",
     "tag",
-    "getplug",
+    "getplugin",
     "plugins",
     "welcome"
     },
