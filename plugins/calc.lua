@@ -9,7 +9,7 @@ local function mathjs(exp)
   elseif c == 400 then
     text = b
   else
-    text = 'Unexpected error\n'
+    text = 'یک ارر غیر منتظره رخ داد\n'
       ..'Is api.mathjs.org up?'
   end
   return text
@@ -21,9 +21,9 @@ end
 
 return {
   description = "Calculate math expressions with mathjs API",
-  usage = "!calc [expression]: evaluates the expression and sends the result.",
+  usage = "ماشین حساب [expression]: evaluates the expression and sends the result.",
   patterns = {
-    "^[!/]calc (.*)$"
+    "^ماشین حساب (.*)$"
   },
   run = run
 }
