@@ -230,10 +230,10 @@ if matches[1]:lower() == 'اخراج' then
 			return
 		end
 		if not is_admin(msg) and is_momod2(matches[2], msg.to.id) then
-			return "شما نمیتوانید مدیر اصلی و یا ندیران دیکر را اخراج کنید"
+			return "شما نمیتوانید مدیر اصلی و یا مدیران دیکر را اخراج کنید"
 		end
 		if tonumber(matches[2]) == tonumber(msg.from.id) then
-			return "You can't kick your self !"
+			return "شما نمیتوانید خودتان را حذف کنید"
 		end
       		local user_id = matches[2]
       		local chat_id = msg.to.id
@@ -243,7 +243,7 @@ if matches[1]:lower() == 'اخراج' then
 	else
 		local cbres_extra = {
 			chat_id = msg.to.id,
-			get_cmd = 'kick',
+		                     	get_cmd = ' اخراج',
 			from_id = msg.from.id
 		}
 		local username = matches[2]
@@ -257,7 +257,7 @@ end
     return
   end
 
-  if matches[1]:lower() == 'banall' then -- Global ban
+  if matches[1]:lower() == 'سوپر بن' then -- Global ban
     if type(msg.reply_id) ~="nil" and is_admin(msg) then
       return get_message(msg.reply_id,banall_by_reply, false)
     end
@@ -269,11 +269,11 @@ end
          	return false 
         end
         	banall_user(targetuser)
-       		return 'User ['..user_id..' ] globally banned'
+       		return 'کاربر ['..user_id..' ] سوپر بن شد'
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
-		get_cmd = 'banall',
+              		get_cmd = 'سوپر بن',
 		from_id = msg.from.id
 	}
 		local username = matches[2]
@@ -281,7 +281,7 @@ end
 		res_user(username, kick_ban_res, cbres_extra)
       	end
   end
-  if matches[1]:lower() == 'unbanall' then -- Global unban
+  if matches[1]:lower() == 'حذف سوپر بن' then -- Global unban
     local user_id = matches[2]
     local chat_id = msg.to.id
       if string.match(matches[2], '^%d+$') then
@@ -289,11 +289,11 @@ end
           	return false 
         end
        		unbanall_user(user_id)
-        	return 'User ['..user_id..' ] removed from global ban list'
+        	return 'کاربر ['..user_id..' ] از سوپر بن خارج شد'
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
-		get_cmd = 'unbanall',
+	              	get_cmd = 'حذف سوپر بن',
 		from_id = msg.from.id
 	}
 		local username = matches[2]
@@ -301,28 +301,28 @@ end
 		res_user(username, kick_ban_res, cbres_extra)
       end
   end
-  if matches[1]:lower() == "gbanlist" then -- Global ban list
+  if matches[1]:lower() == "لیست سوپر بن" then -- Global ban list
     return banall_list()
   end
 end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
-    "^[!/]([Bb]anlist) (.*)$",
-    "^[!/]([Bb]anlist)$",
-    "^[!/]([Gg]banlist)$",
-    "^[!/]([Bb]an) (.*)$",
-    "^[!/]([Kk]ick)$",
-    "^[!/]([Uu]nban) (.*)$",
-    "^[!/]([Uu]nbanall) (.*)$",
-    "^[!/]([Uu]nbanall)$",
-    "^[!/]([Kk]ick) (.*)$",
-    "^[!/]([Kk]ickme)$",
-    "^[!/]([Bb]an)$",
-    "^[!/]([Uu]nban)$",
-    "^[!/]([Ii]d)$",
+    "^(سوپر بن) (.*)$",
+    "^(سوپر بن)$",
+    "^(لیست بن) (.*)$",
+    "^(لیست بن)$",
+    "^(لیست سوپر بن)$",
+    "^(بن) (.*)$",
+    "^(اخراج)$",
+    "^(حذف بن) (.*)$",
+    "^(حذف سوپر بن) (.*)$",
+    "^(حذف سوپر بن)$",
+    "^(اخراج) (.*)$",
+    "^(اخراج من)$",
+    "^(بن)$",
+    "^(حذف بن)$",
+    "^(آیدی)$",
     "^!!tgservice (.+)$"
   },
   run = run,
