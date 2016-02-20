@@ -169,10 +169,10 @@ local function run(msg, matches)
          	return
         end
         if not is_admin(msg) and is_momod2(matches[2], msg.to.id) then
-          	return "you can't ban mods/owner/admins"
+          	return " شما نمیتوانید مدیر اصلی و یا مدیران دیگر را بن کنید"
         end
         if tonumber(matches[2]) == tonumber(msg.from.id) then
-          	return "You can't ban your self !"
+          	return "شما نمیتوانید خودتان را بن کنید"
         end
         local name = user_print_name(msg.from)
         savelog(msg.to.id, name.." ["..msg.from.id.."] baned user ".. matches[2])
@@ -180,7 +180,7 @@ local function run(msg, matches)
       else
 		local cbres_extra = {
 		chat_id = msg.to.id,
-		get_cmd = 'ban',
+		              get_cmd = 'بن',
 		from_id = msg.from.id
 		}
 		local username = matches[2]
@@ -190,7 +190,7 @@ local function run(msg, matches)
   end
 
 
-  if matches[1]:lower() == 'unban' then -- /unban 
+  if matches[1]:lower() == 'حذف بن' then -- /unban 
     if type(msg.reply_id)~="nil" and is_momod(msg) then
       local msgr = get_message(msg.reply_id,unban_by_reply, false)
     end
@@ -203,11 +203,11 @@ local function run(msg, matches)
         	redis:srem(hash, user_id)
         	local name = user_print_name(msg.from)
         	savelog(msg.to.id, name.." ["..msg.from.id.."] unbaned user ".. matches[2])
-        	return 'User '..user_id..' unbanned'
+        	return ' بن کاربر '..user_id..' حذف شد'
       else
 		local cbres_extra = {
 			chat_id = msg.to.id,
-			get_cmd = 'unban',
+			                     get_cmd = 'حذف بن',
 			from_id = msg.from.id
 		}
 		local username = matches[2]
@@ -216,7 +216,7 @@ local function run(msg, matches)
 	end
  end
 
-if matches[1]:lower() == 'kick' then
+if matches[1]:lower() == 'اخراج' then
     if type(msg.reply_id)~="nil" and is_momod(msg) then
       if is_admin(msg) then
         local msgr = get_message(msg.reply_id,Kick_by_reply_admins, false)
@@ -230,7 +230,7 @@ if matches[1]:lower() == 'kick' then
 			return
 		end
 		if not is_admin(msg) and is_momod2(matches[2], msg.to.id) then
-			return "you can't kick mods/owner/admins"
+			return "شما نمیتوانید مدیر اصلی و یا ندیران دیکر را اخراج کنید"
 		end
 		if tonumber(matches[2]) == tonumber(msg.from.id) then
 			return "You can't kick your self !"
