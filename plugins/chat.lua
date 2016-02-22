@@ -21,13 +21,13 @@ if msg.text == "@teleseed" then
 	return "که چی مثلا ؟ خیلی شاخی؟"
 end
 if msg.text == "bot" then
-	return "hum?"
+	return "هان?"
 end
 if msg.text == "Bot" then
-	return "Huuuum?"
+	return "هـــــان?"
 end
 if msg.text == "?" then
-	return "خسته نمیشی اینقد سوال میپرسی؟"
+	return "دیگه چیه ؟"
 end
 if msg.text == "Bye" then
 	return "خدافظ جوجو"
@@ -85,11 +85,11 @@ return {
 		"^@teleseed$",
 		"^[Bb]ye$",
 		"^?$",
-  "^کرابوی,
+  "^کرابوی$,
   "^@kerabot,
-  "^خوبی؟,
-  "^تو خوبی؟,
-  "^خوبم,
+  "^خوبی؟$,
+  "^تو خوبی؟$,
+  "^خوبم$,
 		"^[Ss]alam$",
 		"^خدافظ$",
 		"^بای$",
