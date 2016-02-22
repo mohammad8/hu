@@ -13,7 +13,7 @@
 ]]
 
 do
-local Arian = 99530862 --put your id here(BOT OWNER ID)
+local Arian = 120816252 --put your id here(BOT OWNER ID)
 
 local function setrank(msg, name, value) -- setrank function
   local hash = nil
@@ -57,7 +57,7 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
   local um_hash = 'msgs:'..result.id..':'..extra.chat2
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'تعداد پیام های فرستاده شده : '..user_info_msgs..'\n\n'
-  text = text..'https://telegram.me/BlacklifeTGch'
+  text = text..'https://telegram.me/kerach kera team'
   send_msg(extra.receiver, text, ok_cb,  true)
   else
 	send_msg(extra.receiver, extra.user..' نام کاربری مورد نظر یافت نشد.', ok_cb, false)
@@ -145,11 +145,11 @@ setrank(result, result.from.id, value)
 end
 
 local function run(msg, matches)
- if matches[1]:lower() == 'setrank' then
+ if matches[1]:lower() == 'تنظیم مقام' then
   local hash = 'usecommands:'..msg.from.id..':'..msg.to.id
   redis:incr(hash)
   if not is_sudo(msg) then
-    return "Only for Sudo"
+    return "فقط برای سودو ها"
   end
   local receiver = get_receiver(msg)
   local Reply = msg.reply_id
@@ -164,7 +164,7 @@ local function run(msg, matches)
   return text
   end
   end
- if matches[1]:lower() == 'info' and not matches[2] then
+ if matches[1]:lower() == 'مشخصات کامل' and not matches[2] then
   local receiver = get_receiver(msg)
   local Reply = msg.reply_id
   if msg.reply_id then
@@ -208,11 +208,11 @@ local function run(msg, matches)
 	 text = text..'نام گروه : '..msg.to.title..'\n'
      text = text..'ایدی گروه : '..msg.to.id
     end
-	text = text..'\n\n https://telegram.me/BlacklifeTGch Team'
+	text = text..'\n\n https://telegram.me/Kerach kera team'
     return send_msg(receiver, text, ok_cb, true)
     end
   end
-  if matches[1]:lower() == 'info' and matches[2] then
+  if matches[1]:lower() == 'مشخصات کامل' and matches[2] then
    local user = matches[2]
    local chat2 = msg.to.id
    local receiver = get_receiver(msg)
@@ -228,18 +228,18 @@ end
 return {
   description = 'Know your information or the info of a chat members.',
   usage = {
-	'!info: Return your info and the chat info if you are in one.',
-	'(Reply)!info: Return info of replied user if used by reply.',
-	'!info <id>: Return the info\'s of the <id>.',
-	'!info @<user_name>: Return the member @<user_name> information from the current chat.',
-	'!setrank <userid> <rank>: change members rank.',
-	'(Reply)!setrank <rank>: change members rank.',
+	' مشخصات کامل: Return your info and the chat info if you are in one.',
+	'(Reply) مشخصات کامل: Return info of replied user if used by reply.',
+	' مشخصات کامل <id>: Return the info\'s of the <id>.',
+	' مشخصات کامل @<user_name>: Return the member @<user_name> information from the current chat.',
+	' تنظیم مقام <userid> <rank>: change members rank.',
+	'(Reply) تنظیم مقام <rank>: change members rank.',
   },
   patterns = {
-	"^[/!]([Ii][Nn][Ff][Oo])$",
-	"^[/!]([Ii][Nn][Ff][Oo]) (.*)$",
-	"^[/!]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (%d+) (.*)$",
-	"^[/!]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (.*)$",
+	"^( مشخصات کامل)$",
+	"^( مشخصات کامل) (.*)$",
+	"^( تنظیم مقام) (%d+) (.*)$",
+	"^( تنظیم مقام) (.*)$",
   },
   run = run
 }
