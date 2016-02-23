@@ -237,7 +237,8 @@ function create_config( )
     "welcome",
     "tag",
     "chat",
-    "kickme"
+    "kickme",
+    "spm"
     },
     sudo_users = {120816252,147191022},--Sudo users
     disabled_channels = {},
