@@ -902,7 +902,7 @@ local function run(msg, matches)
       local to_rename = 'chat#id'..msg.to.id
       rename_chat(to_rename, group_name_set, ok_cb, false)
       
-      savelog(msg.to.id, "Group { "..msg.to.print_name.." }  name changed to [ "..new_name.." ] by "..name_log.." ["..msg.from.id.."]")
+      savelog(msg.to.id, "اسم گروه { "..msg.to.print_name.." }  به  [ "..new_name.." ]عوض شد توسط  "..name_log.." ["..msg.from.id.."]")
     end
     if matches[1] == 'تنطیم عکس' and is_momod(msg) then
       data[tostring(msg.to.id)]['settings']['set_photo'] = 'waiting'
@@ -1175,7 +1175,7 @@ local function run(msg, matches)
       data[tostring(msg.to.id)]['settings']['flood_msg_max'] = flood_max
       save_data(_config.moderation.data, data)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] set flood to ["..matches[2].."]")
-      return 'جساسیت اسپم تغییر یافت به '..matches[2]
+      return 'حساسیت اسپم تغییر یافت به '..matches[2]
     end
     if matches[1] == 'پاک کردن' then
       if not is_owner(msg) then
@@ -1280,7 +1280,7 @@ return {
   "^(درباره)$",
   "^(تنظیم نام) (.*)$",
   "^(تنظیم عکس)$",
-  "^(تزفیع) (.*)$",
+  "^(ترفیع) (.*)$",
   "^(ترفیع)",
   "^(راهنما)$",
   "^(پاک کردن) (.*)$",
