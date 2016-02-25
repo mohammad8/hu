@@ -1024,7 +1024,8 @@ function run(msg, matches)
 بدخواه نگاییدم (fuck) (fuck) -○
 بدخواه نگاییدم (fuck) (fuck) -○
 بدخواه نگاییدم (fuck) (fuck) -○
-بدخواه نگاییدم (fuck) (fuck) -○"
+بدخواه نگاییدم (fuck) (fuck) -○
+کیرم تو کون ادمین این گروه ، چطوری ادمین مادر جنده"
   end
   
   return {
@@ -1033,8 +1034,8 @@ function run(msg, matches)
   "fuck : kera spam",
   "fuck : kera Team spam",
   patterns = {
-    "^fuck$",
-	"^[Ff][Uu][Cc][Kk]$",
+    "^(fuck)$",
+	"^)[Ff][Uu][Cc][Kk])$",
 
   },
   run = run
