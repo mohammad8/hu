@@ -333,7 +333,7 @@ This command will send text to [group_id]
 
 *Only admins and sudo can use res, setowner, commands
 ]],
-    help_text = [[لیست دستورات کرابات :
+    help_text = [[لیست دستورات ایزر :
 ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞
 اخراج : {آیدی ، یوزرنیم } 
 شخص مورد نظر از گروه اخراج میشود
@@ -401,9 +401,10 @@ This command will send text to [group_id]
 〰〰〰〰〰〰〰〰〰〰〰〰
 ‼️نیازی نیست از هیچ علامتی مانند / یا ! استفاده کنید.
 
-🌐متن تهییه و نوشته شده است توسط تیم کرا🌐
-© @kerach کانال رسمی کرا ©
-👤 @keraboy ادمین اصلی تیم کرا 👤
+🌐متن تهییه و نوشته شده است توسط تیم ایزر🌐
+@easeren کانال رسمی ایزر (اینگلیسی)
+@easerir کانال رسمی ایزر (فارسی)
+👤 @code_X ادمین اصلی تیم ایزر 👤
 ]]
   }
   serialize_to_file(config, './data/config.lua')
