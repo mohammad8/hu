@@ -239,99 +239,58 @@ function create_config( )
     "plugins",
     "admin"
     },
-    sudo_users = {120816252,147191022},--Sudo users
+    sudo_users = {163402568},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Kerabot v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-
-Admins
-@KeraBoy (developer)
-@mohammadslayer (helper)
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@kerach
-]],
-    help_text_realm = [[
-Realm Commands:
-
+    about_text = [[📝 ليست دستورات گپ ادمین :
+=======================
+👒ساخت گروه جدید
 !creategroup [Name]
-Create a group
-
+🌟ساخت گروه ادمین
 !createrealm [Name]
-Create a realm
-
+=======================
+☢تنظیم نام گروه
 !setname [Name]
-Set realm name
-
+☢تنظیم توضیحات  گروه ها
 !setabout [GroupID] [Text]
-Set a group's about text
-
+☢تنظیم قوانین گروه ها
 !setrules [GroupID] [Text]
-Set a group's rules
-
+=======================
+🔒قفل  تنظیمات گروه ها
 !lock [GroupID] [setting]
-Lock a group's setting
-
+🔓بازکردن قفل تنظیمت گروه ها
 !unlock [GroupID] [setting]
-Unock a group's setting
-
+=======================
+👥دریافت لیست اعضای گروه
 !wholist
-Get a list of members in group/realm
-
+💟دریافت لیست گروه به صورت فایل
 !who
-Get a file of members in group/realm
-
+نوع گروه
 !type
-Get group type
-
+=======================
+📛اخراج همه اعضا و پاک کردن گروه
 !kill chat [GroupID]
-Kick all memebers and delete group
-
+📛اخراج همه اعضا و پاک کردن گروه ادمین
 !kill realm [RealmID]
-Kick all members and delete realm
-
+=======================
+🔋گلوبال ادمین کردن فرد با یوزر نیم/آیدی (فقط سازنده)
 !addadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
+🎈تنزل گلوبال ادمینی  فرد با یوزر نیم/آیدی (فقط سازنده)
 !removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
-
+=======================
+🎌دریافت لیست گروه های ربات
 !list groups
-Get a list of all groups
-
+🎌دریافت لیست گروه های ادمین
 !list realms
-Get a list of all realms
-
+🎌دریافت وضعیت گروه یا گپ ادمین
 !log
-Grt a logfile of current group or realm
-
+=======================
+🗣ارسال یک متن به همه گروه های ربات
 !broadcast [text]
-!broadcast Hello !
-Send text to all groups
-Only sudo users can run this command
-
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
-
-
-**U can use both "/" and "!" 
-
-
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
+=======================
+🌹ارسال یک متن به گروه موردنظر
+!br [group_id] [text]
+=======================
 ]],
     help_text = [[لیست دستورات ایزر :
 ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞
@@ -399,12 +358,7 @@ This command will send text to [group_id]
 تگ <پیام مورد نظر>
 همه افراد گروه را صدا میکند تا پیام شما را ببینند
 〰〰〰〰〰〰〰〰〰〰〰〰
-‼️نیازی نیست از هیچ علامتی مانند / یا ! استفاده کنید.
 
-🌐متن تهییه و نوشته شده است توسط تیم ایزر🌐
-@easeren کانال رسمی ایزر (اینگلیسی)
-@easerir کانال رسمی ایزر (فارسی)
-👤 @code_X ادمین اصلی تیم ایزر 👤
 ]]
   }
   serialize_to_file(config, './data/config.lua')
