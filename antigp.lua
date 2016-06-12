@@ -240,7 +240,7 @@ function create_config( )
     "kickme",
     "spm"
     },
-    sudo_users = {120816252,147191022},--Sudo users
+    sudo_users = {163402568},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Kerabot Bot V2 Beta
