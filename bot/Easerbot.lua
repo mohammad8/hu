@@ -242,7 +242,9 @@ function create_config( )
     sudo_users = {163402568},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[📝 ليست دستورات گپ ادمین :
+    about_text = [[
+]],
+    help_text_realm = [[📝 ليست دستورات گپ ادمین :
 =======================
 👒ساخت گروه جدید
 !creategroup [Name]
